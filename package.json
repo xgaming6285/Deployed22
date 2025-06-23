@@ -1,0 +1,33 @@
+{
+  "name": "lead-management-platform",
+  "version": "1.0.0",
+  "description": "MERN Lead Management Platform for FTD, Filler, and Cold Leads",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "install-server": "cd backend && npm install",
+    "install-client": "cd frontend && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "build": "cd frontend && npm run build",
+    "test": "cd backend && npm test && cd ../frontend && npm test",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": [
+    "lead-management",
+    "mern",
+    "crm",
+    "ftd"
+  ],
+  "author": "Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "https-proxy-agent": "^7.0.6",
+    "mongoose-paginate-v2": "^1.9.1"
+  }
+}
