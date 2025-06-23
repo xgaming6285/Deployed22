@@ -64,5 +64,6 @@ ENV RENDER=true
 # Expose port
 EXPOSE 5000
 
-# Start the backend server
-CMD ["npm", "start", "--prefix", "backend"] 
+# Change to backend directory and start the server
+WORKDIR /app/backend
+CMD ["npm", "start"] 
